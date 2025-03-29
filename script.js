@@ -8,7 +8,7 @@ sendMessageButton.addEventListener('click', () => {
     const messageText = messageInput.value.trim();
     if (messageText === '') return;
 
-    sendMessageToDatabase(messageText, "ใำสฮฯใ ใฬๅๆแ");
+    sendMessageToDatabase(messageText, "ู…ุณุชุฎุฏู… ู…ุฌููู");
     messageInput.value = '';
 });
 
@@ -28,10 +28,10 @@ function sendMessageToDatabase(message, sender) {
         if (data.status === "success") {
             fetchMessagesFromDatabase();
         } else {
-            console.error("ฮุร Ýํ ลัำวแ วแัำวแษ:", data.message);
+            console.error("ุฎุทุฃ ูู ุฅุฑุณุงู ุงูุฑุณุงูุฉ:", data.message);
         }
     })
-    .catch(error => console.error("ฮุร Ýํ วแวสีวแ:", error));
+    .catch(error => console.error("ุฎุทุฃ ูู ุงูุงุชุตุงู:", error));
 }
 
 function fetchMessagesFromDatabase() {
@@ -45,5 +45,5 @@ function fetchMessagesFromDatabase() {
             document.getElementById("messages").appendChild(messageElement);
         });
     })
-    .catch(error => console.error("ฮุร Ýํ ฬแศ วแัำวฦแ:", error));
+    .catch(error => console.error("ุฎุทุฃ ูู ุฌูุจ ุงูุฑุณุงุฆู:", error));
 }
